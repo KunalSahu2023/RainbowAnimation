@@ -1,0 +1,577 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#container{
+  background-color: yellow;
+  width: 400px;
+  height: 400px;
+  border: 2px solid black;
+  margin: 200px;  
+ 
+  /* Eclipse */
+}
+.box{
+  background: orange;
+  margin: 100px 100px;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  animation : eclipse 2s ease-in infinite;
+}
+.box::before{
+  content: "hi";
+  background-color: white;
+  border-radius: 50px;
+  margin: 800px 80px;
+  border: 1px solid red;
+  width: 200px;
+  height: 200px;
+
+}
+
+@keyframes eclipse {
+  0%{
+    rotate: 0deg;
+  }
+  25%{
+    rotate: 20deg
+  }
+  50%{
+    rotate: 20deg
+  }
+  100%{
+    rotate: 0deg
+  }
+
+}
+
+/* Shaking */
+#box{
+  background-color: red;
+  color: black;
+  box-shadow: 5px 2px 5px black;
+  border-radius: 10px;
+  width: 400px;
+  height:50px;
+  margin: 100px 100px;
+  
+}
+.shake{
+  text-align: center;
+  text-shadow: 3px 2px 4px yellow;
+  font-size: 40px;
+  animation: shake ease-in-out 2s infinite;
+}
+
+@keyframes shake{
+  0%{
+   
+    rotate: 0deg;
+  }
+  25%{
+    
+    rotate: 30deg;
+  }
+  50%{
+    
+    rotate: -30deg;
+  }
+  100%{ 
+    rotate: 0deg;
+  }
+}
+
+/* Pandulome */
+#container2{
+  margin : 150px 0px 0px 200px;
+  width: 300px;
+  height: 15px;
+  background-color: violet;
+}
+.line{
+  display: inline-block;
+  margin: 15px 20px 0px 20px;
+  width: 5px;
+  height: 150px;
+  background-color: violet;
+}
+.line1{
+  animation : left 2s ease-in-out infinite ;
+}
+.line::before{
+  content: ' ';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-top: 130px;
+  background-color: violet;
+
+}
+.line5{
+  animation : right 2s linear infinite;
+}
+
+@keyframes left{
+  0%{
+    rotate: 50deg;
+  }
+  25%{
+    rotate : 20deg;
+  }
+
+75%{
+  rotate : -20deg;
+}
+100%{
+  rotate: 0deg;
+}
+}
+
+@keyframes right{
+  0%{
+    rotate: 0deg;
+  }
+  25%{
+    rotate : 20deg;
+  }
+
+75%{
+  rotate : -20deg;
+}
+100%{
+  rotate: 50deg;
+}
+}
+
+
+/* Circle move */
+
+#container3{
+  background-color: black;
+  border: 1px solid red;
+  width: 600px;
+  height: 100px;
+  margin: 50px 50px;
+  animation: roadmove 2s ease-in-out infinite;
+}
+.wheel{
+  background-color: yellow;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin: 20px 30px 0px 30px;
+}
+.wheel1{
+  animation : wheelmove1 1s linear infinite ;
+}
+.wheel2{
+  animation : wheelmove2 1s linear infinite ;
+}
+.wheel3{
+  animation : wheelmove3 1s linear infinite ;
+}
+.wheel4{
+  animation : wheelmove4 1s linear infinite ;
+}
+.wheel5{
+  animation : wheelmove5 1s linear infinite ;
+}
+
+@keyframes roadmove {
+  0%{
+    background-color: yellow;
+  }
+  25%{
+    background-color: green;
+  }
+  50%{
+    background-color: orange;
+  }
+  100%{
+    background-color: gray;
+  }
+}
+
+  @keyframes wheelmove1 {
+    0%{
+      rotate: 0deg;
+      background-color: gray;
+    }
+    25%{
+      rotate : 90deg;
+      background-color: green;
+    }
+    50%{
+      rotate: 180deg;
+      background-color: slateblue;
+    }
+    100%{
+      rotate : 360deg;
+      background-color: violet;
+    }    
+  }
+  @keyframes wheelmove2 {
+    100%{
+      rotate: 0deg;
+      background-color: gray;
+    }
+    50%{
+      rotate : 90deg;
+      background-color: green;
+    }
+    25%{
+      rotate: 180deg;
+      background-color: slateblue;
+    }
+    0%{
+      rotate : 360deg;
+      background-color: violet;
+    }    
+  }
+  @keyframes wheelmove3 {
+    50%{
+      rotate: 0deg;
+      background-color: gray;
+    }
+    25%{
+      rotate : 90deg;
+      background-color: green;
+    }
+    100%{
+      rotate: 180deg;
+      background-color: slateblue;
+    }
+    50%{
+      rotate : 360deg;
+      background-color: violet;
+    }    
+  }
+  @keyframes wheelmove4 {
+    50%{
+      rotate: 0deg;
+      background-color: gray;
+    }
+    100%{
+      rotate : 90deg;
+      background-color: green;
+    }
+    0%{
+      rotate: 180deg;
+      background-color: slateblue;
+    }
+    25%{
+      rotate : 360deg;
+      background-color: violet;
+    }    
+  }
+  @keyframes wheelmove5 {
+    25%{
+      rotate: 0deg;
+      background-color: gray;
+    }
+    0%{
+      rotate : 90deg;
+      background-color: green;
+    }
+    100%{
+      rotate: 180deg;
+      background-color: slateblue;
+    }
+    50%{
+      rotate : 360deg;
+      background-color: violet;
+    }    
+  }
+
+  #container-4{
+    margin: 100px 100px;
+    width: 150px;
+    height : 250px;
+    background-color: black;
+    border: 5px solid blue;
+    box-shadow: 5px 7px 5px red;
+  }
+  .box-2{
+        
+  }
+  .light{
+    background-color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 40px;
+    border: 2px solid gray;
+  }
+  .red{
+    animation: stop 1s linear infinite;
+
+  }
+  .yellow{
+    background-color: yellow;
+    animation: ready 10s linear infinite;
+
+  }
+  .green{
+    background-color: green;
+    animation: go 20s linear infinite;
+  }
+  .base{
+    background-color: black;
+    width: 25px;
+    margin-top: -100px;
+    margin-left: 165px;
+    height: 200px;
+    border: 2px solid blue;
+  }
+  @keyframes stop{
+    0%{
+      background-color: red;
+    }
+    100%{
+      background-color: black;
+    }
+  }
+  @keyframes ready{
+    0%{
+      background-color:yellow;
+    }
+    100%{
+      background-color: black;
+    }
+  }
+  @keyframes go{
+    0%{
+      background-color: green;
+    }
+    100%{
+      background-color: black;
+    }
+  }
+
+  /* rainbow */
+
+  /* rainbow container */
+#rainbow-container{
+  width: 500px;
+  height: 300px;
+  margin-top: 100px;
+  margin-left: 100px;
+  animation: white 2s linear 1;
+}
+/* rainbow box */
+.rainbow-box{
+  height: 20px;
+  width: 480px;
+  margin-top: 15px;
+}
+/* rainbow color */
+.violet-1{
+  animation: violet 2s linear 1;
+}
+.indigo-1{  
+  animation: indigo 2s linear ;
+ 
+}
+.blue-1{
+    animation: blue 2s linear 1;
+ 
+}
+.green-1{
+  animation: green 2s linear 1;
+
+}
+.yellow-1{
+  animation: yellow 2s linear 1;
+}
+.orange-1{
+  animation: orange 2s linear 1;
+
+}
+.red-1{
+  animation: red 2s linear 1;
+}
+
+/* rainbow animation */
+
+@keyframes violet {
+  0%{
+    background-color: white;
+    top: 0%;
+    left: 0%;
+    width: 10%;
+  }
+  25%{
+    background-color: violet;
+    width: 40%;
+  }
+  50%{
+    background-color: violet;
+    width: 60%;
+  }
+  75%{
+    background-color: violet;
+    width: 80%;
+  }
+  100%{
+    background-color: violet;
+    width: 100%;
+  }
+}
+
+@keyframes indigo {
+  0%{
+    background-color: white;
+    top: 0%;
+    left: 0%;
+    width: 10%;
+  }
+  25%{
+    background-color: indigo;
+    width: 40%;
+  }
+  50%{
+    background-color: indigo;
+    width: 60%;
+  }
+  75%{
+    background-color: indigo;
+    width: 80%;
+  }
+  100%{
+    background-color: indigo;
+    width: 100%;
+  }
+}
+
+@keyframes blue {
+  0%{
+    background-color: white;
+    top: 0%;
+    left: 0%;
+    width: 10%;
+  }
+  25%{
+    background-color: bluet;
+    width: 40%;
+  }
+  50%{
+    background-color: blue;
+    width: 60%;
+  }
+  75%{
+    background-color: blue;
+    width: 80%;
+  }
+  100%{
+    background-color: blue;
+    width: 100%;
+  }
+}
+
+@keyframes green {
+  0%{
+    background-color: white;
+   
+    width: 10%;
+  }
+  25%{
+    background-color: green;
+    width: 40%;
+  }
+  50%{
+    background-color: green;
+    width: 60%;
+  }
+  75%{
+    background-color: green;
+    width: 80%;
+  }
+  100%{
+    background-color: green;
+    width: 100%;
+  }
+}
+
+@keyframes yellow {
+  0%{
+    background-color: white;
+    top: 0%;
+    left: 0%;
+    width: 10%;
+  }
+  25%{
+    background-color: yellow;
+    width: 40%;
+  }
+  50%{
+    background-color: yellow;
+    width: 60%;
+  }
+  75%{
+    background-color: yellow;
+    width: 80%;
+  }
+  100%{
+    background-color: yellow;
+    width: 100%;
+  }
+}
+
+@keyframes orange {
+  0%{
+    background-color: white;
+    top: 0%;
+    left: 0%;
+    width: 10%;
+  }
+  25%{
+    background-color: orange;
+    width: 40%;
+  }
+  50%{
+    background-color: orange;
+    width: 60%;
+  }
+  75%{
+    background-color: orange;
+    width: 80%;
+  }
+  100%{
+    background-color: orange;
+    width: 100%;
+  }
+}
+@keyframes red {
+  0%{
+    background-color: white;
+    top: 0%;
+    left: 0%;
+    width: 10%;
+  }
+  25%{
+    background-color: red;
+    width: 40%;
+  }
+  50%{
+    background-color: red;
+    width: 60%;
+  }
+  75%{
+    background-color: red;
+    width: 80%;
+  }
+  100%{
+    background-color: red;
+    width: 100%;
+  }
+}
+
+
